@@ -1,0 +1,13 @@
+.book-library{
+  box-sizing: border-box;
+  display: inline;
+}
+.book{
+  background: aqua;
+  display: inline-block;
+  vertical-align: top;
+  margin: 20px 8px 16px;
+  text-align: initial;
+  padding: 20px;
+  color: black;
+}
