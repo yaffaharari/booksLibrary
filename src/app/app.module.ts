@@ -10,6 +10,7 @@ import { BookListManagerComponent } from './book-list-manager/book-list-manager.
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { AddBookComponent } from './add-book/add-book.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AddBookComponent } from './add-book/add-book.component';
     BookEditComponent,
     BookListManagerComponent,
     HomeComponent,
-    AddBookComponent
+    AddBookComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
