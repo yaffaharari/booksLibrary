@@ -1,0 +1,9 @@
+.edit-book{
+  width: 500px;
+  display: grid;
+}
+.edit-book-btn{
+  margin: 12px 8px 16px;
+  display:inline-block;
+  width: fit-content;
+}

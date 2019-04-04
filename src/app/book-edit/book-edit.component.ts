@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Book } from '../book';
+import { Book } from '../model/book';
 
 // @ts-ignore
 @Component({
@@ -11,8 +11,8 @@ import { Book } from '../book';
          <span>Author</span> <input [(ngModel)]="book.author">
          <span>Date</span> <input type="date" [(ngModel)]="book.date">
       </div>
-     <button (click)="saveBookBtn(book)" class="book-edit-btn">save</button>
-     <button (click)="cancelEditBookBtn()" class="book-edit-btn">cancel</button>
+     <button (click)="saveBookBtn(book)" class="edit-book-btn">save</button>
+     <button (click)="cancelEditBookBtn()" class="edit-book-btn">cancel</button>
     </div>
   `,
   styleUrls: ['./book-edit.component.css']
@@ -23,11 +23,9 @@ export class BookEditComponent implements OnInit {
   @Output() saveBook: EventEmitter<Book> = new EventEmitter<Book>();
   @Output() isEditMode: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  constructor() {
-  }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   saveBookBtn(book: Book) {
     if (book.title.length == 0 || book.author.length == 0 || book.date.toLocaleDateString().length == 0) {
@@ -38,7 +36,6 @@ export class BookEditComponent implements OnInit {
   }
 
   cancelEditBookBtn() {
-    //this.isEditMode = !this.isEditMode;
     this.isEditMode.emit();
   }
 }

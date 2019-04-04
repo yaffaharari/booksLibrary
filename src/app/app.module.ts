@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
 import { BookEditComponent } from './book-edit/book-edit.component';
 import {FormsModule} from '@angular/forms';
-import { BookServiceService } from './book-service.service';
+import { BookServiceService } from './services/book-service.service';
 import { BookListManagerComponent } from './book-list-manager/book-list-manager.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';

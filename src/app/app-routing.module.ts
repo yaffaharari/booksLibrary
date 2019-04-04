@@ -5,13 +5,13 @@ import { HomeComponent } from './home/home.component';
 import { environment } from '../environments/environment.prod';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { RouterModule, Routes } from '@angular/router';
-
+import { AddBookComponent } from './add-book/add-book.component';
 
 const appRoute: Routes = [
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
   {path: 'bookList', component: BookListManagerComponent},
-  {path: 'addBook', component: AppComponent},
-  {path: '**', component: NotFoundComponent}
+  {path: 'addBook', component: AddBookComponent}
 ];
 
 @NgModule({

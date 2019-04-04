@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Book } from './book';
+import { Book } from '../model/book';
 
 @Injectable({
   providedIn: 'root'
@@ -21,10 +21,10 @@ export class BookServiceService {
     return this.BOOKS;
   }
 
-  addBook() {
-    let randomBook = this.BOOKS[Math.floor(Math.random() * this.BOOKS.length)];
-    let newRandomBook = new Book(this.BOOKS.length + 1, randomBook.author, randomBook.date, randomBook.title);
-    this.BOOKS.push(newRandomBook);
+  addBook(book: Book) {
+   // let randomBook = this.BOOKS[Math.floor(Math.random() * this.BOOKS.length)];
+   // let newRandomBook = new Book(this.BOOKS.length + 1, randomBook.author, randomBook.date, randomBook.title);
+    this.BOOKS.push(book);
   }
 
   editBook(id: number): Book {
